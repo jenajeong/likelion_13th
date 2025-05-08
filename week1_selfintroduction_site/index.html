@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="index.css">
+        <title> 제 스스로의 나 </title>
+    </head>
+    <body>
+        <section id="home" class="page">
+            <div class="home">
+                <img src="background.jpg" alt="no image">
+                <div class="hometext">
+                    <h1>JENA JEONG</h1>
+                    <h4>self introduction page</h4>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/___zxna/" target="_blank">insta</a>
+                    <a href="https://velog.io/@zxna/posts" target="_blank">velog</a>
+                    <a href="https://github.com/jenajeong" target="_blank">github</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="page">
+            <div class="about">
+                <img src="background2.jpg" alt="no image">
+                <div class="about-content">
+                    <div class="favorite">
+                        <h1>FAVORITE</h1>
+                        <h4> 좋아하는 것</h4>
+                    </div>
+                    <div class="hobby">
+                        <h1>HOBBY</h1>
+                        <h4> 취미</h4>
+                    </div>
+                    <div class="music">
+                        <h1>MUSIC</h1>
+                        <h4> 나의 플레이리스트</h4>
+                    </div>
+                </div>
+                <div class="favorite_content">
+                    <div class="content-wrapper">
+                        <h2>FAVORITE</h2>
+                        <div class="food">
+                            <h3>FOOD</h3>
+                            <h4>초밥</h4>
+                            <h4>텐동</h4>
+                            <h4>라멘</h4>
+                        </div>
+                        <div class="activity">
+                            <h3>ACTIVITY</h3>
+                            <h4>자전거</h4>
+                            <h4>가벼운 등산</h4>
+                            <h4>오래오래 걷기</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="hobby_content">
+                    <div class="hobby-wrapper">
+                        <h2>HOBBY</h2>
+                        <div class="hobby">
+                            <h4>사진 찍기</h4>
+                            <h4>전시회, 박물관 가기</h4>
+                            <h4>홀로 당일치기 여행가기</h4>
+                        </div>       
+                    </div>       
+                </div>
+                <div class="music_content">
+                    < <img src="music.jpg" alt="no image" usemap="#image-map">
+                    <map name="image-map">
+                        <area shape="rect" coords="56,691,474,112"   alt="area1" href="https://music.apple.com/kr/playlist/p/pl.u-2aoqXVbiGRzW0gm" target="_blank">
+                        <area shape="rect" coords="946,691,493,111"  alt="area2" href="https://music.apple.com/kr/playlist/m/pl.u-gxblkoxsbYE0aoG" target="_blank">
+                    </map>
+                </div>
+            </div>
+        </section> 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = [
+                    { 
+                        content: document.querySelector(".favorite_content"),
+                        trigger: document.querySelector(".favorite h1")
+                    },
+                    { 
+                        content: document.querySelector(".music_content"),
+                        trigger: document.querySelector(".music h1")
+                    },
+                    { 
+                        content: document.querySelector(".hobby_content"),
+                        trigger: document.querySelector(".hobby h1")
+                    }
+                ];
+        
+                const aboutContent = document.querySelector(".about-content");
+        
+                // 각 섹션에 대해 설정
+                sections.forEach(section => {
+
+                    section.content.style.width = aboutContent.offsetWidth + "px";
+        
+
+                    section.trigger.addEventListener("click", function () {
+
+                        sections.forEach(item => {
+                            if (item.content !== section.content) {
+                                item.content.classList.remove("active");  
+                            }
+                        });
+        
+                        
+                        if (section.content.classList.contains("active")) {
+                            section.content.classList.remove("active"); 
+                        } else {
+                            section.content.classList.add("active"); 
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
