@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자기소개홈</title>
+        <link rel="stylesheet" href="{% static 'introduce/home.css' %}">
+    </head>
+    <body>
+        <hi>안녕하세요 {{nickname}}님!</h1>
+        <div class='name'>
+            <h3>이름: </h3><h2>정제나</h2>
+        </div>
+        <div class='department'>
+            <h3>관심사: </h3><h2>취업...어떻게 잘하지...</h2>
+        </div>
+        <div class='mbti'>
+            <h3>좋아하는 음식: </h3><h2>초밥, 텐동</h2>
+        </div>
+        <div class='hobby'>
+            <h3>취미: </h3><h2>갑자기 어디로든 떠나기</h2>
+        </div>
+    </body>
+</html>

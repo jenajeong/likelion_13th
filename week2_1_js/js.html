@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let season = ['봄','여름','가을','겨울'];
+        console.log(season[0]);
+        console.log(season.length);
+        console.log();
+
+        let fruits = ['사과','바나나','체리'];
+
+        fruits.push('오렌지');
+        console.log(fruits);
+
+        fruits.pop();
+        console.log(fruits);
+
+        let somefruits = fruits.slice(1,3);
+        console.log(somefruits);
+
+        let morefruits = ['딸기','배'];
+        let allfruits = fruits.concat(morefruits);
+        console.log(allfruits);
+
+        let fruitsstring = fruits.join(", ");
+        console.log(fruitsstring);
+
+        fruits.shift();
+        console.log(fruits);
+
+        fruits.unshift('망고');
+        console.log(fruits);
+
+        let person = {
+            name : '정제나',
+            age : 24,
+            hobby : ['노래 듣기',' 책 읽기','여행'],
+            "파트" : '백엔드',
+        }
+
+        console.log(person['파트']);
+        console.log(person.name);
+        console.log(person['name']);
+
+        let age=20;
+
+        if (age >= 20){
+            console.log('성인');
+        }else if(age >=13){
+            console.log('청소년');
+        }else{
+            console.log('어린이');
+        }
+
+        let age1 = 20;
+        let hasID = false;
+
+        if (age1>=20 && hasID){
+            console.log('통과');
+        }else if(age1>=20){
+            console.log('신분증을 제시해주세요');
+        }else {
+            console.log('출동')
+        }
+
+        for(let i=1; i<=100; i++){
+            console.log(i);
+        }
+        
+        let output = 0;
+
+        for(let i=1; i<=100; i++){
+            console.log(i);
+            output += i;
+        }
+        console.log(output);
+        
+        let number = [10, 20, 30,40,50];
+        let sum = 0;
+
+        for(let i=0; i < number.length; i++){
+            console.log(number[i]);
+            sum += number[i];
+        }
+
+        for(let i in person){
+            console.log(i);
+            console.log(person[i]);
+        }
+
+        for (let i in fruits){
+            console.log(i);
+            console.log(fruits[i]);
+        }
+
+        for (let i of fruits){
+            console.log(i);
+        } //배열에서는 더 좋을 듯 !!
+
+        let num=1;
+        
+        while (num <=100){
+            console.log(num);
+            sum += num;
+            num++;
+        }
+        console.log(sum);
+
+        for (let i=1; i <=5; i++){
+            if(i==3){
+                console.log('continue');
+                continue;
+            }else if (i ==4){
+                console.log('break') 
+                break;
+            }
+        console.log(i);
+        }
+        
+        let h = 0;
+        let j = 0;
+
+        for (let i=1; i<=100; 1++){
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>

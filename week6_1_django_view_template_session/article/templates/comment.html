@@ -1,0 +1,24 @@
+<form action="{% url 'article:create_comment' pk=article.pk %}" method="post">  
+  {% csrf_token %}
+  <textarea name="content" placeholder="댓글을 입력하세요" required></textarea>
+  <button type="submit">댓글 작성</button>
+</form>
+
+<!-- 댓글 리스트 -->
+<ul>
+  {% for comment in comments %}
+    <li>
+      <strong>{{ comment.author.username }}</strong>: {{ comment.content }}
+      
+      <!-- 댓글 작성자면 삭제 버튼 보여주기 -->
+      {% if comment.author == user %}
+        <form action="{% url 'delete_comment' pk=comment.pk %}" method="post" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit">삭제</button>
+        </form>
+      {% endif %}
+    </li>
+  {% empty %}
+    <li>댓글이 없습니다.</li>
+  {% endfor %}
+</ul>
