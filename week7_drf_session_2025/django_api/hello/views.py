@@ -13,7 +13,7 @@ def hello_world(request):
 
 def hello_world_json(request):
     """
-    JSON 형식으로 응답하는 뷰
+    JSON 형식으로 응답하는 뷰 
     """
     data = {
         "message": "Hello, World!",
